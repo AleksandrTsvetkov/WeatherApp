@@ -68,7 +68,7 @@ extension APIManager {
     
     func fetch<T>(request: URLRequest, parse: @escaping ([String: AnyObject]) -> T?, completionHandler: @escaping (APIResult<T>) -> Void ) {
         let dataTask = JSONTaskWith(request: request) { (json, response, error) in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async {  
                 guard let json = json else {
                     if let error = error {
                         completionHandler(.Failure(error))

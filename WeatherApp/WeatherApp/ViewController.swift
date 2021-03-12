@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var humidityLabel: UILabel!
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     let weatherManager = APIWeatherManager(apiKey: "5b2e4f1aca3c2c84ddcda0d35ece66ba")
     let coordinates = Coordinates(latitude: 35.0, longitude: 35.0)
     
-    //MARK: FUNCTIONS
+    // MARK: FUNCTIONS
     @IBAction func refreshButtonPressed(_ sender: UIButton) {
     }
     
@@ -33,7 +33,6 @@ class ViewController: UIViewController {
                     print(error.localizedDescription)
             }
         }
-        
     }
 
     func updateUIWith(currentWeather: CurrentWeather) {
